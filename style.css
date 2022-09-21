@@ -1,0 +1,59 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: normal;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(to right, #00AAFF, #00AC5A);
+}
+
+.app {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4,100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+
+.app > button {
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid white;
+    outline: none;
+    background-color: rgba(255,255,255,0.75)
+}
+
+.app > button:hover {
+    background-color: rgba(255,255,255,0.9)
+}
+
+.span-two {
+    grid-column: span 2;
+}
+
+.screen-output {
+    grid-column: 1 / -1;
+    background-color: rgba(0,0,0,0.75);
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 10px;
+    /*wrap output into screen*/
+    word-wrap: break-word;  
+    word-break: break-all;
+}
+
+.screen-output .previous-operand {
+    color: rgba(255,255,255,0.75);
+    font-size: 1.5rem;
+}
+
+.screen-output .current-operand {
+    color: white;
+    font-size: 2.5rem;
+}   
